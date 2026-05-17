@@ -1,0 +1,8 @@
+# Lean build artifacts
+/build/
+/lake-packages/
+/.lake/
+*.olean
+*.olean.lock
+*.ilean
+lake-manifest.json

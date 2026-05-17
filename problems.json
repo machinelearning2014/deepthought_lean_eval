@@ -1,0 +1,878 @@
+{
+  "bakerWustholz_linearForms_logs": {
+    "theorem_names": [
+      "bakerWustholz_linearForms_logs"
+    ],
+    "definition_names": [],
+    "permitted_axioms": [
+      "propext",
+      "Quot.sound",
+      "Classical.choice"
+    ],
+    "title": "Baker-W\u00fcstholz theorem on linear forms in logarithms",
+    "module": "LeanEval.NumberTheory.BakerWustholz",
+    "submitter": "Ralf Stephan"
+  },
+  "balanceable_bounded_partitions": {
+    "theorem_names": [
+      "minimal_balanceable_of_bounded"
+    ],
+    "definition_names": [],
+    "permitted_axioms": [
+      "propext",
+      "Quot.sound",
+      "Classical.choice"
+    ],
+    "title": "Balanceable k-bounded partitions",
+    "module": "LeanEval.Combinatorics.BalanceableBoundedPartitions",
+    "submitter": "Julia M. Himmel"
+  },
+  "brauer_character_in_cyclotomic": {
+    "theorem_names": [
+      "brauer_character_in_cyclotomic"
+    ],
+    "definition_names": [],
+    "permitted_axioms": [
+      "propext",
+      "Quot.sound",
+      "Classical.choice"
+    ],
+    "title": "Character values of finite groups lie in cyclotomic fields",
+    "module": "LeanEval.RepresentationTheory.BrauerSplittingField",
+    "submitter": "Kim Morrison"
+  },
+  "bvp_comparison": {
+    "theorem_names": [
+      "bvp_comparison"
+    ],
+    "definition_names": [],
+    "permitted_axioms": [
+      "propext",
+      "Quot.sound",
+      "Classical.choice"
+    ],
+    "title": "Comparison principle for the Dirichlet BVP",
+    "module": "LeanEval.Analysis.ODE.BVPComparison",
+    "submitter": "Kim Morrison"
+  },
+  "cerf_gamma_four": {
+    "theorem_names": [
+      "cerf_gamma_four"
+    ],
+    "definition_names": [],
+    "permitted_axioms": [
+      "propext",
+      "Quot.sound",
+      "Classical.choice"
+    ],
+    "title": "Cerf's theorem: every self-diffeomorphism of S3 is smoothly isotopic to a linear isometry",
+    "module": "LeanEval.Topology.CerfGammaFour",
+    "submitter": "Kim Morrison"
+  },
+  "chudnovsky_formula_for_pi_inv": {
+    "theorem_names": [
+      "chudnovsky_formula_for_pi_inv"
+    ],
+    "definition_names": [],
+    "permitted_axioms": [
+      "propext",
+      "Quot.sound",
+      "Classical.choice"
+    ],
+    "title": "Chudnovsky formula for pi inverse",
+    "module": "LeanEval.Analysis.Chudnovsky",
+    "submitter": "Kim Morrison"
+  },
+  "ci_regenerate_main_check": {
+    "theorem_names": [
+      "ci_regenerate_main_check"
+    ],
+    "definition_names": [],
+    "permitted_axioms": [
+      "propext",
+      "Quot.sound",
+      "Classical.choice"
+    ],
+    "title": "CI regenerate-main check",
+    "module": "LeanEval.EasyProblems",
+    "submitter": "Kim Morrison"
+  },
+  "contractibleSpace_houseWithTwoRooms": {
+    "theorem_names": [
+      "contractibleSpace_houseWithTwoRooms"
+    ],
+    "definition_names": [],
+    "permitted_axioms": [
+      "propext",
+      "Quot.sound",
+      "Classical.choice"
+    ],
+    "title": "Bing's house with two rooms is contractible",
+    "module": "LeanEval.Topology.HouseWithTwoRooms",
+    "submitter": "Junyan Xu"
+  },
+  "cubic_decay_asymptotic": {
+    "theorem_names": [
+      "cubic_decay_asymptotic"
+    ],
+    "definition_names": [],
+    "permitted_axioms": [
+      "propext",
+      "Quot.sound",
+      "Classical.choice"
+    ],
+    "title": "Polynomial decay rate of y' = -y^3",
+    "module": "LeanEval.Analysis.ODE.CubicDecay",
+    "submitter": "Kim Morrison"
+  },
+  "cyclotomic_integer_house_between_two_and_76_33": {
+    "theorem_names": [
+      "cyclotomic_integer_house_between_two_and_76_33"
+    ],
+    "definition_names": [],
+    "permitted_axioms": [
+      "propext",
+      "Quot.sound",
+      "Classical.choice"
+    ],
+    "title": "Real cyclotomic integer with house in (2, 76/33)",
+    "module": "LeanEval.NumberTheory.SmallHouse",
+    "submitter": "Kim Morrison"
+  },
+  "cyclotomic_integer_house_le_two": {
+    "theorem_names": [
+      "cyclotomic_integer_house_le_two"
+    ],
+    "definition_names": [],
+    "permitted_axioms": [
+      "propext",
+      "Quot.sound",
+      "Classical.choice"
+    ],
+    "title": "Real cyclotomic integer with house at most 2",
+    "module": "LeanEval.NumberTheory.SmallHouse",
+    "submitter": "Kim Morrison"
+  },
+  "deBranges_theorem": {
+    "theorem_names": [
+      "deBranges"
+    ],
+    "definition_names": [],
+    "permitted_axioms": [
+      "propext",
+      "Quot.sound",
+      "Classical.choice"
+    ],
+    "title": "De Branges's theorem (Bieberbach conjecture)",
+    "module": "LeanEval.ComplexAnalysis.DeBranges",
+    "submitter": "Junyan Xu"
+  },
+  "def_hole_example": {
+    "theorem_names": [
+      "foo_def"
+    ],
+    "definition_names": [
+      "foo"
+    ],
+    "permitted_axioms": [
+      "propext",
+      "Quot.sound",
+      "Classical.choice"
+    ],
+    "title": "def-hole minimal example",
+    "module": "LeanEval.Sandbox.DefHoleExample",
+    "submitter": "Kim Morrison"
+  },
+  "dirichlet_eigenvalues_eq_nat_sq": {
+    "theorem_names": [
+      "dirichlet_eigenvalues_eq_nat_sq"
+    ],
+    "definition_names": [],
+    "permitted_axioms": [
+      "propext",
+      "Quot.sound",
+      "Classical.choice"
+    ],
+    "title": "Dirichlet eigenvalues of -y'' = lambda y on [0,pi] are n^2",
+    "module": "LeanEval.Analysis.ODE.DirichletEigenvalues",
+    "submitter": "Kim Morrison"
+  },
+  "dvd_card_connectedComponent_markoffGraph": {
+    "theorem_names": [
+      "dvd_card_connectedComponent_markoffGraph"
+    ],
+    "definition_names": [],
+    "permitted_axioms": [
+      "propext",
+      "Quot.sound",
+      "Classical.choice"
+    ],
+    "title": "Chen theorem for Markoff graphs",
+    "module": "LeanEval.Combinatorics.MarkoffGraph",
+    "submitter": "Kim Morrison"
+  },
+  "e8_irrep_tensor_square_decomp": {
+    "theorem_names": [
+      "e8_irrep_tensor_square_decomp"
+    ],
+    "definition_names": [],
+    "permitted_axioms": [
+      "propext",
+      "Quot.sound",
+      "Classical.choice"
+    ],
+    "title": "Existence of a 779247-dim irreducible e\u2088-representation with 40 tensor-square isotypic components",
+    "module": "LeanEval.RepresentationTheory.ExceptionalLieTensorSquare",
+    "submitter": "Kim Morrison"
+  },
+  "exists_chiral_knot": {
+    "theorem_names": [
+      "exists_chiral_knot"
+    ],
+    "definition_names": [],
+    "permitted_axioms": [
+      "propext",
+      "Quot.sound",
+      "Classical.choice"
+    ],
+    "title": "Existence of a chiral oriented knot",
+    "module": "LeanEval.KnotTheory.Chiral",
+    "submitter": "Kim Morrison"
+  },
+  "exists_complementary_polynomial_on_unit_circle": {
+    "theorem_names": [
+      "exists_complementary_polynomial_on_unit_circle"
+    ],
+    "definition_names": [],
+    "permitted_axioms": [
+      "propext",
+      "Quot.sound",
+      "Classical.choice"
+    ],
+    "title": "Complementary polynomial on the unit circle",
+    "module": "LeanEval.ComplexAnalysis.ComplementaryPolynomials",
+    "submitter": "Kim Morrison"
+  },
+  "exists_nonisotopic_knots": {
+    "theorem_names": [
+      "exists_nonisotopic_knots"
+    ],
+    "definition_names": [],
+    "permitted_axioms": [
+      "propext",
+      "Quot.sound",
+      "Classical.choice"
+    ],
+    "title": "Existence of a non-isotopic pair of oriented knots",
+    "module": "LeanEval.KnotTheory.NonIsotopicKnots",
+    "submitter": "Kim Morrison"
+  },
+  "exists_nonisotopic_link": {
+    "theorem_names": [
+      "exists_nonisotopic_link"
+    ],
+    "definition_names": [],
+    "permitted_axioms": [
+      "propext",
+      "Quot.sound",
+      "Classical.choice"
+    ],
+    "title": "Existence of a non-isotopic pair of oriented two-component links",
+    "module": "LeanEval.KnotTheory.Linking",
+    "submitter": "Kim Morrison"
+  },
+  "fermat_last_theorem": {
+    "theorem_names": [
+      "fermat_last_theorem"
+    ],
+    "definition_names": [],
+    "permitted_axioms": [
+      "propext",
+      "Quot.sound",
+      "Classical.choice"
+    ],
+    "title": "Fermat's Last Theorem",
+    "module": "LeanEval.NumberTheory.FermatLastTheorem",
+    "submitter": "Xuanji Li"
+  },
+  "finite_graph_ramsey_theorem": {
+    "theorem_names": [
+      "finite_graph_ramsey_theorem"
+    ],
+    "definition_names": [],
+    "permitted_axioms": [
+      "propext",
+      "Quot.sound",
+      "Classical.choice"
+    ],
+    "title": "Finite Ramsey theorem for graphs",
+    "module": "LeanEval.Combinatorics.Ramsey",
+    "submitter": "Kim Morrison"
+  },
+  "finite_group_isSolvable_of_card_eq_prime_pow_mul_prime_pow": {
+    "theorem_names": [
+      "finite_group_isSolvable_of_card_eq_prime_pow_mul_prime_pow"
+    ],
+    "definition_names": [],
+    "permitted_axioms": [
+      "propext",
+      "Quot.sound",
+      "Classical.choice"
+    ],
+    "title": "Burnside p^a q^b theorem",
+    "module": "LeanEval.GroupTheory.Burnside",
+    "submitter": "Kim Morrison"
+  },
+  "five_transitive_card_classification": {
+    "theorem_names": [
+      "five_transitive_card_classification"
+    ],
+    "definition_names": [],
+    "permitted_axioms": [
+      "propext",
+      "Quot.sound",
+      "Classical.choice"
+    ],
+    "title": "Possible orders of 5-transitive finite permutation groups",
+    "module": "LeanEval.GroupTheory.MultiplyTransitive",
+    "submitter": "Kim Morrison"
+  },
+  "frobenius_kernel_isNormal": {
+    "theorem_names": [
+      "frobenius_kernel_isNormal"
+    ],
+    "definition_names": [],
+    "permitted_axioms": [
+      "propext",
+      "Quot.sound",
+      "Classical.choice"
+    ],
+    "title": "Frobenius's theorem: the Frobenius kernel is normal",
+    "module": "LeanEval.GroupTheory.Frobenius",
+    "submitter": "Kim Morrison"
+  },
+  "g2_irrep_tensor_square_decomp": {
+    "theorem_names": [
+      "g2_irrep_tensor_square_decomp"
+    ],
+    "definition_names": [],
+    "permitted_axioms": [
+      "propext",
+      "Quot.sound",
+      "Classical.choice"
+    ],
+    "title": "Existence of a 64-dim irreducible g\u2082-representation with 14 tensor-square isotypic components",
+    "module": "LeanEval.RepresentationTheory.ExceptionalLieTensorSquare",
+    "submitter": "Kim Morrison"
+  },
+  "glAction_range_eq_centralizer_symAction": {
+    "theorem_names": [
+      "glAction_range_eq_centralizer_symAction"
+    ],
+    "definition_names": [],
+    "permitted_axioms": [
+      "propext",
+      "Quot.sound",
+      "Classical.choice"
+    ],
+    "title": "Schur-Weyl duality: GL(V) image equals centralizer of S_k image",
+    "module": "LeanEval.RepresentationTheory.SchurWeyl",
+    "submitter": "Kim Morrison"
+  },
+  "glauberman_zStar": {
+    "theorem_names": [
+      "glauberman_zStar"
+    ],
+    "definition_names": [],
+    "permitted_axioms": [
+      "propext",
+      "Quot.sound",
+      "Classical.choice"
+    ],
+    "title": "Glauberman's Z* theorem for isolated involutions",
+    "module": "LeanEval.GroupTheory.GlaubermanZStar",
+    "submitter": "Kim Morrison"
+  },
+  "gleason_theorem_finite": {
+    "theorem_names": [
+      "gleason_theorem_finite"
+    ],
+    "definition_names": [],
+    "permitted_axioms": [
+      "propext",
+      "Quot.sound",
+      "Classical.choice"
+    ],
+    "title": "Gleason's theorem (finite-dimensional)",
+    "module": "LeanEval.Analysis.Gleason",
+    "submitter": "Kim Morrison"
+  },
+  "gleason_theorem_separable": {
+    "theorem_names": [
+      "gleason_theorem_separable"
+    ],
+    "definition_names": [],
+    "permitted_axioms": [
+      "propext",
+      "Quot.sound",
+      "Classical.choice"
+    ],
+    "title": "Gleason's theorem (separable Hilbert space)",
+    "module": "LeanEval.Analysis.Gleason",
+    "submitter": "Kim Morrison"
+  },
+  "heat_kernel_solves_heat_equation": {
+    "theorem_names": [
+      "heat_kernel_solves_heat_equation"
+    ],
+    "definition_names": [],
+    "permitted_axioms": [
+      "propext",
+      "Quot.sound",
+      "Classical.choice"
+    ],
+    "title": "Gaussian heat kernel solves the 1D heat equation",
+    "module": "LeanEval.Analysis.ODE.HeatKernel",
+    "submitter": "Kim Morrison"
+  },
+  "instance_hole_example": {
+    "theorem_names": [],
+    "definition_names": [
+      "WidgetCarrier",
+      "instInhabitedWidget"
+    ],
+    "permitted_axioms": [
+      "propext",
+      "Quot.sound",
+      "Classical.choice"
+    ],
+    "title": "instance-hole minimal example",
+    "module": "LeanEval.Sandbox.InstanceHoleExample",
+    "submitter": "Kim Morrison"
+  },
+  "irreducible_nonnegative_matrix_has_positive_eigenvector_at_spectralRadius": {
+    "theorem_names": [
+      "irreducible_nonnegative_matrix_has_positive_eigenvector_at_spectralRadius"
+    ],
+    "definition_names": [],
+    "permitted_axioms": [
+      "propext",
+      "Quot.sound",
+      "Classical.choice"
+    ],
+    "title": "Perron-Frobenius for irreducible nonnegative matrices",
+    "module": "LeanEval.LinearAlgebra.PerronFrobenius",
+    "submitter": "Kim Morrison"
+  },
+  "jacobian_challenge_alggeo": {
+    "theorem_names": [
+      "AlgebraicGeometry.JacobianChallenge.Jacobian.smoothOfRelativeDimension_genus",
+      "AlgebraicGeometry.JacobianChallenge.Jacobian.instIsProper",
+      "AlgebraicGeometry.JacobianChallenge.Jacobian.instGeometricallyIrreducible",
+      "AlgebraicGeometry.JacobianChallenge.Jacobian.comp_ofCurve",
+      "AlgebraicGeometry.JacobianChallenge.Jacobian.exists_unique_ofCurve_comp"
+    ],
+    "definition_names": [
+      "AlgebraicGeometry.JacobianChallenge.genus",
+      "AlgebraicGeometry.JacobianChallenge.Jacobian",
+      "AlgebraicGeometry.JacobianChallenge.Jacobian.instGrpObj",
+      "AlgebraicGeometry.JacobianChallenge.Jacobian.ofCurve"
+    ],
+    "permitted_axioms": [
+      "propext",
+      "Quot.sound",
+      "Classical.choice"
+    ],
+    "title": "Jacobian of a smooth proper curve (Merten challenge)",
+    "module": "LeanEval.AlgebraicGeometry.JacobianChallenge",
+    "submitter": "Christian Merten"
+  },
+  "jacobian_challenge_diffgeo": {
+    "theorem_names": [
+      "JacobianChallenge.genus_eq_zero_iff_homeo",
+      "JacobianChallenge.Jacobian.instT2Space",
+      "JacobianChallenge.Jacobian.instCompactSpace",
+      "JacobianChallenge.Jacobian.instIsManifold",
+      "JacobianChallenge.Jacobian.instLieAddGroup",
+      "JacobianChallenge.Jacobian.ofCurve_contMDiff",
+      "JacobianChallenge.Jacobian.ofCurve_self",
+      "JacobianChallenge.Jacobian.ofCurve_inj",
+      "JacobianChallenge.Jacobian.pushforward_contMDiff",
+      "JacobianChallenge.Jacobian.pushforward_id_apply",
+      "JacobianChallenge.Jacobian.pushforward_comp_apply",
+      "JacobianChallenge.Jacobian.pullback_contMDiff",
+      "JacobianChallenge.Jacobian.pullback_id_apply",
+      "JacobianChallenge.Jacobian.pullback_comp_apply",
+      "JacobianChallenge.Jacobian.pushforward_pullback"
+    ],
+    "definition_names": [
+      "JacobianChallenge.genus",
+      "JacobianChallenge.Jacobian",
+      "JacobianChallenge.Jacobian.instAddCommGroup",
+      "JacobianChallenge.Jacobian.instTopologicalSpace",
+      "JacobianChallenge.Jacobian.instChartedSpace",
+      "JacobianChallenge.Jacobian.ofCurve",
+      "JacobianChallenge.Jacobian.pushforward",
+      "JacobianChallenge.Jacobian.pullback",
+      "JacobianChallenge.Jacobian.degree"
+    ],
+    "permitted_axioms": [
+      "propext",
+      "Quot.sound",
+      "Classical.choice"
+    ],
+    "title": "Jacobian of a compact Riemann surface (Buzzard challenge)",
+    "module": "LeanEval.Geometry.JacobianChallenge",
+    "submitter": "Kevin Buzzard"
+  },
+  "linear_ode_asymptotic_stability": {
+    "theorem_names": [
+      "linear_ode_asymptotic_stability"
+    ],
+    "definition_names": [],
+    "permitted_axioms": [
+      "propext",
+      "Quot.sound",
+      "Classical.choice"
+    ],
+    "title": "Linear ODE with negative-real-part eigenvalues is asymptotically stable",
+    "module": "LeanEval.Analysis.ODE.LinearStability",
+    "submitter": "Kim Morrison"
+  },
+  "list_append_singleton_length": {
+    "theorem_names": [
+      "list_append_singleton_length"
+    ],
+    "definition_names": [],
+    "permitted_axioms": [
+      "propext",
+      "Quot.sound",
+      "Classical.choice"
+    ],
+    "title": "Appending a singleton increases the list length",
+    "module": "LeanEval.EasyProblems",
+    "submitter": "Kim Morrison"
+  },
+  "m23_irrep_tensor_square_decomp": {
+    "theorem_names": [
+      "m23_irrep_tensor_square_decomp"
+    ],
+    "definition_names": [],
+    "permitted_axioms": [
+      "propext",
+      "Quot.sound",
+      "Classical.choice"
+    ],
+    "title": "Existence of an order-10200960 group with a 22-dim irrep whose tensor square has 4 isotypic components",
+    "module": "LeanEval.RepresentationTheory.M23TensorSquare",
+    "submitter": "Kim Morrison"
+  },
+  "mem_convexHull_finset_extremePoints_of_mem_compact_convex": {
+    "theorem_names": [
+      "mem_convexHull_finset_extremePoints_of_mem_compact_convex"
+    ],
+    "definition_names": [],
+    "permitted_axioms": [
+      "propext",
+      "Quot.sound",
+      "Classical.choice"
+    ],
+    "title": "Minkowski-Caratheodory theorem",
+    "module": "LeanEval.ConvexGeometry.MinkowskiCaratheodory",
+    "submitter": "Kim Morrison"
+  },
+  "mulCayley_connected_iff_closure_eq_top": {
+    "theorem_names": [
+      "mulCayley_connected_iff_closure_eq_top"
+    ],
+    "definition_names": [],
+    "permitted_axioms": [
+      "propext",
+      "Quot.sound",
+      "Classical.choice"
+    ],
+    "title": "Cayley graph connected iff generators generate the group",
+    "module": "LeanEval.Combinatorics.CayleyConnected",
+    "submitter": "Kim Morrison"
+  },
+  "neukirch_uchida": {
+    "theorem_names": [
+      "neukirch_uchida"
+    ],
+    "definition_names": [],
+    "permitted_axioms": [
+      "propext",
+      "Quot.sound",
+      "Classical.choice"
+    ],
+    "title": "Neukirch\u2013Uchida theorem",
+    "module": "LeanEval.NumberTheory.NeukirchUchida",
+    "submitter": "Junyan Xu"
+  },
+  "oppenheim_inequality": {
+    "theorem_names": [
+      "oppenheim_inequality"
+    ],
+    "definition_names": [],
+    "permitted_axioms": [
+      "propext",
+      "Quot.sound",
+      "Classical.choice"
+    ],
+    "title": "Oppenheim's inequality for Hadamard products",
+    "module": "LeanEval.LinearAlgebra.Oppenheim",
+    "submitter": "Kim Morrison"
+  },
+  "permute_to_unimodal": {
+    "theorem_names": [
+      "minRearrange_correct"
+    ],
+    "definition_names": [],
+    "permitted_axioms": [
+      "propext",
+      "Quot.sound",
+      "Classical.choice"
+    ],
+    "title": "A competition programming problem about permuting a permutation to be unimodal",
+    "module": "LeanEval.ProgramVerification.PermuteToUnimodal",
+    "submitter": "Julia M. Himmel"
+  },
+  "pi1_circle_mulEquiv_int": {
+    "theorem_names": [
+      "pi1_circle_mulEquiv_int"
+    ],
+    "definition_names": [],
+    "permitted_axioms": [
+      "propext",
+      "Quot.sound",
+      "Classical.choice"
+    ],
+    "title": "pi_1 of the circle is Z",
+    "module": "LeanEval.Topology.HomotopyGroups",
+    "submitter": "Kim Morrison"
+  },
+  "pi3_sphere_two_mulEquiv_int": {
+    "theorem_names": [
+      "pi3_sphere_two_mulEquiv_int"
+    ],
+    "definition_names": [],
+    "permitted_axioms": [
+      "propext",
+      "Quot.sound",
+      "Classical.choice"
+    ],
+    "title": "pi_3 of the 2-sphere is Z",
+    "module": "LeanEval.Topology.HomotopyGroups",
+    "submitter": "Kim Morrison"
+  },
+  "pi_succ_sphere_n_mulEquiv_zmod_two": {
+    "theorem_names": [
+      "pi_succ_sphere_n_mulEquiv_zmod_two"
+    ],
+    "definition_names": [],
+    "permitted_axioms": [
+      "propext",
+      "Quot.sound",
+      "Classical.choice"
+    ],
+    "title": "pi_(n+1) of S^n is Z/2 for n at least 3",
+    "module": "LeanEval.Topology.HomotopyGroups",
+    "submitter": "Kim Morrison"
+  },
+  "pin_sphere_n_mulEquiv_int": {
+    "theorem_names": [
+      "pin_sphere_n_mulEquiv_int"
+    ],
+    "definition_names": [],
+    "permitted_axioms": [
+      "propext",
+      "Quot.sound",
+      "Classical.choice"
+    ],
+    "title": "pi_n of the n-sphere is Z",
+    "module": "LeanEval.Topology.HomotopyGroups",
+    "submitter": "Kim Morrison"
+  },
+  "posSemidef_map_exp": {
+    "theorem_names": [
+      "posSemidef_map_exp"
+    ],
+    "definition_names": [],
+    "permitted_axioms": [
+      "propext",
+      "Quot.sound",
+      "Classical.choice"
+    ],
+    "title": "Entrywise exponential of a PSD matrix is PSD",
+    "module": "LeanEval.LinearAlgebra.EntrywiseExpPSD",
+    "submitter": "Kim Morrison"
+  },
+  "rado_riemannSurface": {
+    "theorem_names": [
+      "rado_riemannSurface"
+    ],
+    "definition_names": [],
+    "permitted_axioms": [
+      "propext",
+      "Quot.sound",
+      "Classical.choice"
+    ],
+    "title": "Rad\u00f3's theorem on Riemann surfaces",
+    "module": "LeanEval.Geometry.RadoTheorem",
+    "submitter": "Junyan Xu"
+  },
+  "riemann_hypothesis_iff_lagarias_elementary_criterion": {
+    "theorem_names": [
+      "riemann_hypothesis_iff_lagarias_elementary_criterion"
+    ],
+    "definition_names": [],
+    "permitted_axioms": [
+      "propext",
+      "Quot.sound",
+      "Classical.choice"
+    ],
+    "title": "Lagarias criterion is equivalent to RH",
+    "module": "LeanEval.NumberTheory.Lagarias",
+    "submitter": "Kim Morrison"
+  },
+  "rouche_zero_count_eq": {
+    "theorem_names": [
+      "rouche_zero_count_eq"
+    ],
+    "definition_names": [],
+    "permitted_axioms": [
+      "propext",
+      "Quot.sound",
+      "Classical.choice"
+    ],
+    "title": "Rouche theorem via zero counting",
+    "module": "LeanEval.ComplexAnalysis.Rouche",
+    "submitter": "Kim Morrison"
+  },
+  "schreier_conjecture": {
+    "theorem_names": [
+      "schreier_conjecture"
+    ],
+    "definition_names": [],
+    "permitted_axioms": [
+      "propext",
+      "Quot.sound",
+      "Classical.choice"
+    ],
+    "title": "Schreier's conjecture: outer automorphism group of a finite simple group is solvable",
+    "module": "LeanEval.GroupTheory.SchreierConjecture",
+    "submitter": "Kim Morrison"
+  },
+  "smale_conjecture": {
+    "theorem_names": [
+      "smale_conjecture"
+    ],
+    "definition_names": [],
+    "permitted_axioms": [
+      "propext",
+      "Quot.sound",
+      "Classical.choice"
+    ],
+    "title": "Smale conjecture (Hatcher) in relative parameterized form",
+    "module": "LeanEval.Topology.SmaleConjecture",
+    "submitter": "Kim Morrison"
+  },
+  "sturm_separation": {
+    "theorem_names": [
+      "sturm_separation"
+    ],
+    "definition_names": [],
+    "permitted_axioms": [
+      "propext",
+      "Quot.sound",
+      "Classical.choice"
+    ],
+    "title": "Sturm separation theorem",
+    "module": "LeanEval.Analysis.ODE.SturmSeparation",
+    "submitter": "Kim Morrison"
+  },
+  "substInv_X_sub_X_sq_eq_catalan": {
+    "theorem_names": [
+      "substInv_X_sub_X_sq_eq_catalan"
+    ],
+    "definition_names": [],
+    "permitted_axioms": [
+      "propext",
+      "Quot.sound",
+      "Classical.choice"
+    ],
+    "title": "Catalan generating function via compositional inversion",
+    "module": "LeanEval.Combinatorics.CatalanSubstInv",
+    "submitter": "Kim Morrison"
+  },
+  "symAction_range_eq_centralizer_glAction": {
+    "theorem_names": [
+      "symAction_range_eq_centralizer_glAction"
+    ],
+    "definition_names": [],
+    "permitted_axioms": [
+      "propext",
+      "Quot.sound",
+      "Classical.choice"
+    ],
+    "title": "Schur-Weyl duality: S_k image equals centralizer of GL(V) image",
+    "module": "LeanEval.RepresentationTheory.SchurWeyl",
+    "submitter": "Kim Morrison"
+  },
+  "topological_classification_of_surfaces": {
+    "theorem_names": [
+      "classification_of_surfaces"
+    ],
+    "definition_names": [],
+    "permitted_axioms": [
+      "propext",
+      "Quot.sound",
+      "Classical.choice"
+    ],
+    "title": "Topological classification of surfaces",
+    "module": "LeanEval.Topology.ClassificationOfSurfaces",
+    "submitter": "Junyan Xu"
+  },
+  "two_plus_two": {
+    "theorem_names": [
+      "two_plus_two_eq_four"
+    ],
+    "definition_names": [],
+    "permitted_axioms": [
+      "propext",
+      "Quot.sound",
+      "Classical.choice"
+    ],
+    "title": "2 + 2 = 4",
+    "module": "LeanEval.EasyProblems",
+    "submitter": "Kim Morrison"
+  },
+  "uniformization": {
+    "theorem_names": [
+      "uniformization"
+    ],
+    "definition_names": [],
+    "permitted_axioms": [
+      "propext",
+      "Quot.sound",
+      "Classical.choice"
+    ],
+    "title": "Uniformization theorem for Riemann surfaces",
+    "module": "LeanEval.Geometry.Uniformization",
+    "submitter": "Junyan Xu"
+  },
+  "vonNeumann_doubleCommutant_tfae": {
+    "theorem_names": [
+      "vonNeumann_doubleCommutant_tfae"
+    ],
+    "definition_names": [],
+    "permitted_axioms": [
+      "propext",
+      "Quot.sound",
+      "Classical.choice"
+    ],
+    "title": "von Neumann double commutant theorem",
+    "module": "LeanEval.Analysis.VonNeumannDoubleCommutant",
+    "submitter": "Kim Morrison"
+  }
+}
