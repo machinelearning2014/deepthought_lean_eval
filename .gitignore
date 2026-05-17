@@ -1,8 +1,8 @@
 # Lean build artifacts
 /build/
 /lake-packages/
-/.lake/
+.lake/
 *.olean
 *.olean.lock
 *.ilean
-lake-manifest.json
+__pycache__/
