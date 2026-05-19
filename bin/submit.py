@@ -4,17 +4,19 @@
 The submission process described at https://lean-lang.org/eval/submit/ is:
   1. Host the proof on a GitHub repo or public gist.
   2. Ensure each problem has: lakefile.toml (name=<problem_id>) + Submission.lean.
-  3. Open a GitHub issue on leanprover/lean-eval with your repo/gist URL.
+  3. Open a GitHub issue on leanprover/lean-eval-submissions with your repo URL.
 
 Usage:
     python bin/submit.py <problem_id>           # single problem
     python bin/submit.py --all                  # all solved/unsubmitted problems
 
-The script opens the pre-filled GitHub issue form in your browser.
+The script opens a pre-filled GitHub issue form in your browser with the
+submission URL already filled in.
 """
 
 import json
 import sys
+import urllib.parse
 import webbrowser
 from pathlib import Path
 
@@ -29,7 +31,7 @@ REPO_ROOT = Path(__file__).resolve().parent.parent
 SUBMISSIONS_DIR = REPO_ROOT / "submissions"
 PROBLEMS_FILE = REPO_ROOT / "problems.json"
 
-SUBMIT_PAGE = "https://lean-lang.org/eval/submit/"
+SUBMISSIONS_REPO = "https://github.com/leanprover/lean-eval-submissions/issues/new"
 
 
 def get_repo_url():
@@ -70,6 +72,19 @@ def verify_submission(problem_id):
     return True, "Ready to submit."
 
 
+def open_submission_issue(repo_url, problem_ids):
+    """Open the pre-filled GitHub issue form for the submissions repo."""
+    title = f"[submission] {', '.join(problem_ids)}"
+    params = {
+        "template": "submit.yml",
+        "title": title,
+        "source_url": repo_url,
+    }
+    query = urllib.parse.urlencode(params)
+    url = f"{SUBMISSIONS_REPO}?{query}"
+    webbrowser.open(url)
+
+
 def submit_single(problem_id):
     ok, msg = verify_submission(problem_id)
     if not ok:
@@ -83,9 +98,10 @@ def submit_single(problem_id):
 
     print(f"  {problem_id}: ready")
     print(f"    Submission URL: {repo_url}")
-    print(f"    -> Opening submit page at lean-lang.org/eval/submit/ ...")
+    print(f"    Model: <fill in the form>")
+    print(f"    -> Opening pre-filled issue at github.com/leanprover/lean-eval-submissions/issues/new ...")
 
-    webbrowser.open(SUBMIT_PAGE)
+    open_submission_issue(repo_url, [problem_id])
     return True
 
 
@@ -135,9 +151,13 @@ def main():
             else:
                 print(f"  SKIP:  {pid} — {msg}")
 
-        print(f"\n{len(ready)} submissions ready. Opening the submit page...")
+        if not ready:
+            print("\nNo submissions ready.")
+            return
+
+        print(f"\n{len(ready)} submissions ready. Opening pre-filled issue...")
         print(f"Use URL: {repo_url}")
-        webbrowser.open(SUBMIT_PAGE)
+        open_submission_issue(repo_url, ready)
         return
 
     # Single problem
