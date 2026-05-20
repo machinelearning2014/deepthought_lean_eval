@@ -259,6 +259,4 @@ open Submission.Helpers
     have hsum : r + s = r + s := rfl
     exact hP_total (r + s) r s hr hs hsum
 
-  end Submission
-
 end Submission
