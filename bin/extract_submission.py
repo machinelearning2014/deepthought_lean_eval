@@ -176,8 +176,21 @@ def indent_block(text, spaces=2):
     return "\n".join(prefix + line if line else "" for line in text.splitlines())
 
 
+RE_NAMESPACE_CMD = re.compile(r"^\s*(namespace|end)\s+\S+.*$")
+
+def _strip_namespace_wrappers(items):
+    """Remove `namespace Foo` / `end Foo` lines that wrapped the source file.
+
+    The submission layout provides its own namespace (`Submission.Helpers` for
+    helpers, `Submission` for the target theorem), so any namespace commands
+    carried over from the source file would cause double-wrapping.
+    """
+    return [item for item in items if not RE_NAMESPACE_CMD.match(item)]
+
+
 def render_helpers(imports, helper_items):
-    body = "\n\n".join(item for item in helper_items if item)
+    clean = _strip_namespace_wrappers(helper_items)
+    body = "\n\n".join(item for item in clean if item)
     rendered = []
     rendered.extend(imports or ["import Mathlib"])
     rendered.append("")
