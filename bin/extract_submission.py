@@ -29,6 +29,7 @@ REPO_ROOT = Path(__file__).resolve().parent.parent
 SOURCE_DIR = REPO_ROOT / "DeepthoughtLeanEval"
 SUBMISSIONS_DIR = REPO_ROOT / "submissions"
 PROBLEMS_FILE = REPO_ROOT / "problems.json"
+BENCHMARK_RAW = "https://raw.githubusercontent.com/leanprover/lean-eval/main/generated"
 
 DECL_KEYWORDS = (
     "abbrev",
@@ -62,6 +63,24 @@ def load_problem(problem_id):
     with open(PROBLEMS_FILE, encoding="utf-8") as f:
         problems = json.load(f)
     return problems.get(problem_id)
+
+
+def fetch_challenge_deps_names(problem_id):
+    """Fetch ChallengeDeps.lean from benchmark and return set of definition names it provides."""
+    import urllib.request
+    url = f"{BENCHMARK_RAW}/{problem_id}/ChallengeDeps.lean"
+    try:
+        with urllib.request.urlopen(url) as resp:
+            text = resp.read().decode("utf-8")
+    except Exception:
+        return set()
+    names = set()
+    for line in text.splitlines():
+        name = declaration_name(line)
+        if name:
+            names.add(name)
+            names.add(name.split(".")[-1])  # also match bare name
+    return names
 
 
 def find_source_file(problem_id):
@@ -151,7 +170,14 @@ def is_target_name(name, target_names):
     return any(name == target or bare_name == target.split(".")[-1] for target in target_names)
 
 
-def collect_parts(source_text, target_names):
+def collect_parts(source_text, target_names, framework_names=None):
+    """Split source text into imports, helpers, and target declarations.
+
+    framework_names: names defined in ChallengeDeps — these are excluded from helpers
+                     since the submission imports them via `import ChallengeDeps`.
+    """
+    if framework_names is None:
+        framework_names = set()
     imports = []
     helper_items = []
     target_items = []
@@ -161,6 +187,8 @@ def collect_parts(source_text, target_names):
             imports.append(item.text.strip())
         elif is_target_name(item.name, target_names):
             target_items.append(item.text.strip())
+        elif is_target_name(item.name, framework_names):
+            continue  # skip ChallengeDeps definitions
         else:
             helper_items.append(item.text.strip())
 
@@ -192,8 +220,13 @@ def render_helpers(imports, helper_items):
     clean = _strip_namespace_wrappers(helper_items)
     body = "\n\n".join(item for item in clean if item)
     rendered = []
-    rendered.extend(imports or ["import Mathlib"])
+    rendered.append("import Mathlib")
     rendered.append("")
+    if imports:
+        extra_imports = [i for i in imports if i not in ("import Mathlib", "import ChallengeDeps")]
+        rendered.extend(extra_imports)
+        if extra_imports:
+            rendered.append("")
     rendered.append("namespace Submission.Helpers")
     if body:
         rendered.append("")
@@ -204,10 +237,10 @@ def render_helpers(imports, helper_items):
     return "\n".join(rendered)
 
 
-def render_submission(imports, target_items):
+def render_submission(imports, target_items, has_challenge_deps=True):
     body = "\n\n".join(item for item in target_items if item)
     rendered = []
-    rendered.extend(imports or ["import Mathlib"])
+    rendered.append("import ChallengeDeps" if has_challenge_deps else "import Mathlib")
     rendered.append("import Submission.Helpers")
     rendered.append("")
     rendered.append("namespace Submission")
@@ -221,20 +254,22 @@ def render_submission(imports, target_items):
     return "\n".join(rendered)
 
 
-def write_submission(problem_id, imports, helper_items, target_items):
+def write_submission(problem_id, imports, helper_items, target_items, lakefile_text=None, has_challenge_deps=True):
     sub_dir = SUBMISSIONS_DIR / problem_id
     helpers_dir = sub_dir / "Submission"
     sub_dir.mkdir(parents=True, exist_ok=True)
     helpers_dir.mkdir(parents=True, exist_ok=True)
 
     lakefile = sub_dir / "lakefile.toml"
-    if not lakefile.exists():
+    if lakefile_text:
+        lakefile.write_text(lakefile_text, encoding="utf-8")
+    elif not lakefile.exists():
         lakefile.write_text(f'name = "{problem_id}"\n', encoding="utf-8")
 
     helpers_file = helpers_dir / "Helpers.lean"
     submission_file = sub_dir / "Submission.lean"
     helpers_file.write_text(render_helpers(imports, helper_items), encoding="utf-8")
-    submission_file.write_text(render_submission(imports, target_items), encoding="utf-8")
+    submission_file.write_text(render_submission(imports, target_items, has_challenge_deps), encoding="utf-8")
     return submission_file, helpers_file
 
 
@@ -256,13 +291,22 @@ def main():
         target_names.extend(problem.get("theorem_names", []))
         target_names.extend(problem.get("definition_names", []))
 
+    # Fetch ChallengeDeps names from benchmark so we can exclude them from helpers
+    framework_names = fetch_challenge_deps_names(args.problem_id)
+    has_challenge_deps = len(framework_names) > 0
+
     source_file = args.source if args.source else find_source_file(args.problem_id)
     if not source_file.is_file():
         raise SystemExit(f"Source file does not exist: {source_file}")
 
     source_text = source_file.read_text(encoding="utf-8")
-    imports, helper_items, target_items = collect_parts(source_text, target_names)
-    submission_file, helpers_file = write_submission(args.problem_id, imports, helper_items, target_items)
+    imports, helper_items, target_items = collect_parts(source_text, target_names, framework_names)
+
+    lakefile_text = f'name = "{args.problem_id}"\n'
+    submission_file, helpers_file = write_submission(
+        args.problem_id, imports, helper_items, target_items,
+        lakefile_text=lakefile_text, has_challenge_deps=has_challenge_deps,
+    )
 
     print(f"Extracted {source_file.relative_to(REPO_ROOT)}")
     print(f"  target declarations: {len(target_items)} -> {submission_file.relative_to(REPO_ROOT)}")

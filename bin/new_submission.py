@@ -28,23 +28,23 @@ LAKEFILE_TEMPLATE = """name = "{problem_id}"
 """
 
 
-def fetch_problem_template(problem_id):
-    """Fetch the Challenge.lean and Submission.lean templates from the benchmark repo."""
+def fetch_url(url):
+    """Fetch raw text from a URL, returning None on failure."""
+    try:
+        with urlopen(url) as resp:
+            return resp.read().decode("utf-8")
+    except Exception:
+        return None
+
+
+def fetch_problem_templates(problem_id):
+    """Fetch all relevant templates from the benchmark repo."""
     base = f"{BENCHMARK_RAW}/{problem_id}"
-
-    try:
-        with urlopen(f"{base}/Challenge.lean") as resp:
-            challenge = resp.read().decode("utf-8")
-    except Exception:
-        challenge = None
-
-    try:
-        with urlopen(f"{base}/Submission.lean") as resp:
-            submission = resp.read().decode("utf-8")
-    except Exception:
-        submission = None
-
-    return challenge, submission
+    return {
+        "challenge": fetch_url(f"{base}/Challenge.lean"),
+        "submission": fetch_url(f"{base}/Submission.lean"),
+        "challenge_deps": fetch_url(f"{base}/ChallengeDeps.lean"),
+    }
 
 
 def main():
@@ -73,18 +73,30 @@ def main():
     helpers_dir = sub_dir / "Submission"
     helpers_dir.mkdir()
 
-    # Write lakefile.toml
+    # Write lakefile.toml (minimal — CI provides the full build config)
     (sub_dir / "lakefile.toml").write_text(LAKEFILE_TEMPLATE.format(problem_id=problem_id), encoding="utf-8")
 
     # Fetch upstream templates
     print(f"Fetching templates for {problem_id} ...")
-    challenge, submission = fetch_problem_template(problem_id)
+    templates = fetch_problem_templates(problem_id)
 
-    if submission:
-        (sub_dir / "Submission.lean").write_text(submission, encoding="utf-8")
+    # ChallengeDeps.lean only exists for problems with custom definitions
+    has_challenge_deps = templates["challenge_deps"] is not None
+    if has_challenge_deps:
+        (sub_dir / "ChallengeDeps.lean").write_text(templates["challenge_deps"], encoding="utf-8")
+        print(f"  Wrote ChallengeDeps.lean")
+    else:
+        print(f"  No ChallengeDeps.lean (problem uses only Mathlib types)")
+
+    if templates["submission"]:
+        (sub_dir / "Submission.lean").write_text(templates["submission"], encoding="utf-8")
         print(f"  Wrote Submission.lean")
     else:
         print(f"  [WARN] Could not fetch Submission.lean — write it manually")
+
+    if templates["challenge"]:
+        (sub_dir / "Challenge.lean").write_text(templates["challenge"], encoding="utf-8")
+        print(f"  Wrote Challenge.lean (reference)")
 
     # Helpers stub
     (helpers_dir / "Helpers.lean").write_text(
