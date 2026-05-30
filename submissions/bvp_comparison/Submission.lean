@@ -138,6 +138,5 @@ open Submission.Helpers
       h_deriv_w_mono hc₁_mem hc₂_mem (by linarith)
     -- This gives 0 < deriv w c₁ ≤ deriv w c₂ < 0, a contradiction
     linarith
-  end Submission
 
 end Submission

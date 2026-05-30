@@ -317,6 +317,5 @@ open Submission.Helpers
         have : (-y₁) ((a+b)/2) > 0 := hpos' ((a+b)/2) hx
         have : (-y₁) ((a+b)/2) < 0 := hneg' ((a+b)/2) hx
         linarith
-  end Submission
 
 end Submission
