@@ -238,7 +238,13 @@ def render_helpers(imports, helper_items):
 
 
 def render_submission(imports, target_items, has_challenge_deps=True):
-    body = "\n\n".join(item for item in target_items if item)
+    clean = _strip_namespace_wrappers(target_items)
+    body = "\n\n".join(item for item in clean if item)
+    # Strip namespace/end lines captured inside declaration text
+    body = "\n".join(
+        line for line in body.splitlines()
+        if not RE_NAMESPACE_CMD.match(line)
+    )
     rendered = []
     rendered.append("import ChallengeDeps" if has_challenge_deps else "import Mathlib")
     rendered.append("import Submission.Helpers")
