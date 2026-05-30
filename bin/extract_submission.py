@@ -57,6 +57,7 @@ DECL_NAME_RE = re.compile(
 IMPORT_RE = re.compile(r"^\s*import\s+")
 ATTRIBUTE_RE = re.compile(r"^\s*@\[")
 COMMENT_RE = re.compile(r"^\s*--")
+UNNAMED_SECTION_RE = re.compile(r"^\s*(noncomputable\s+)?section\s*$")
 
 
 def load_problem(problem_id):
@@ -216,6 +217,17 @@ def _strip_namespace_wrappers(items):
     return [item for item in items if not RE_NAMESPACE_CMD.match(item)]
 
 
+def _unnamed_section_close_count(text):
+    """Return how many bare `end` lines needed to close unnamed sections in text."""
+    depth = 0
+    for line in text.splitlines():
+        if UNNAMED_SECTION_RE.match(line):
+            depth += 1
+        elif line.strip() == "end":
+            depth -= 1
+    return max(0, depth)
+
+
 def render_helpers(imports, helper_items):
     clean = _strip_namespace_wrappers(helper_items)
     body = "\n\n".join(item for item in clean if item)
@@ -231,6 +243,9 @@ def render_helpers(imports, helper_items):
     if body:
         rendered.append("")
         rendered.append(indent_block(body))
+        # Close any unnamed sections left open (e.g. from `noncomputable section`)
+        for _ in range(_unnamed_section_close_count(body)):
+            rendered.append("end")
     rendered.append("")
     rendered.append("end Submission.Helpers")
     rendered.append("")

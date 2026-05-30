@@ -319,5 +319,6 @@ namespace Submission.Helpers
     have : a + b - a = b := by ring
     rw [this] at hg_neg_a
     exact hg_neg_a
+end
 
 end Submission.Helpers
