@@ -1,4 +1,18 @@
 {
+  "baer_suzuki": {
+    "theorem_names": [
+      "baer_suzuki"
+    ],
+    "definition_names": [],
+    "permitted_axioms": [
+      "propext",
+      "Quot.sound",
+      "Classical.choice"
+    ],
+    "title": "Baer–Suzuki theorem",
+    "module": "LeanEval.GroupTheory.BaerSuzuki",
+    "submitter": "Kim Morrison"
+  },
   "bakerWustholz_linearForms_logs": {
     "theorem_names": [
       "bakerWustholz_linearForms_logs"
@@ -9,7 +23,7 @@
       "Quot.sound",
       "Classical.choice"
     ],
-    "title": "Baker-W\u00fcstholz theorem on linear forms in logarithms",
+    "title": "Baker-Wüstholz theorem on linear forms in logarithms",
     "module": "LeanEval.NumberTheory.BakerWustholz",
     "submitter": "Ralf Stephan"
   },
@@ -27,6 +41,20 @@
     "module": "LeanEval.Combinatorics.BalanceableBoundedPartitions",
     "submitter": "Julia M. Himmel"
   },
+  "bezout_projective_multiplicity": {
+    "theorem_names": [
+      "bezout_multiplicity"
+    ],
+    "definition_names": [],
+    "permitted_axioms": [
+      "propext",
+      "Quot.sound",
+      "Classical.choice"
+    ],
+    "title": "Bézout's theorem (projective, with multiplicity)",
+    "module": "LeanEval.AlgebraicGeometry.Bezout",
+    "submitter": "Kim Morrison"
+  },
   "brauer_character_in_cyclotomic": {
     "theorem_names": [
       "brauer_character_in_cyclotomic"
@@ -41,6 +69,48 @@
     "module": "LeanEval.RepresentationTheory.BrauerSplittingField",
     "submitter": "Kim Morrison"
   },
+  "brauer_fowler": {
+    "theorem_names": [
+      "brauer_fowler"
+    ],
+    "definition_names": [],
+    "permitted_axioms": [
+      "propext",
+      "Quot.sound",
+      "Classical.choice"
+    ],
+    "title": "Brauer–Fowler theorem",
+    "module": "LeanEval.GroupTheory.BrauerFowler",
+    "submitter": "Kim Morrison"
+  },
+  "brauer_suzuki": {
+    "theorem_names": [
+      "brauer_suzuki"
+    ],
+    "definition_names": [],
+    "permitted_axioms": [
+      "propext",
+      "Quot.sound",
+      "Classical.choice"
+    ],
+    "title": "Brauer–Suzuki theorem (quaternion Sylow 2-subgroup)",
+    "module": "LeanEval.GroupTheory.BrauerSuzuki",
+    "submitter": "Kim Morrison"
+  },
+  "brouwer_fixed_point": {
+    "theorem_names": [
+      "brouwer_fixed_point"
+    ],
+    "definition_names": [],
+    "permitted_axioms": [
+      "propext",
+      "Quot.sound",
+      "Classical.choice"
+    ],
+    "title": "Brouwer fixed-point theorem",
+    "module": "LeanEval.Topology.Brouwer",
+    "submitter": "Kim Morrison"
+  },
   "bvp_comparison": {
     "theorem_names": [
       "bvp_comparison"
@@ -53,6 +123,20 @@
     ],
     "title": "Comparison principle for the Dirichlet BVP",
     "module": "LeanEval.Analysis.ODE.BVPComparison",
+    "submitter": "Kim Morrison"
+  },
+  "cauchy_kovalevskaya": {
+    "theorem_names": [
+      "cauchy_kovalevskaya"
+    ],
+    "definition_names": [],
+    "permitted_axioms": [
+      "propext",
+      "Quot.sound",
+      "Classical.choice"
+    ],
+    "title": "Cauchy–Kovalevskaya theorem",
+    "module": "LeanEval.Analysis.CauchyKovalevskaya",
     "submitter": "Kim Morrison"
   },
   "cerf_gamma_four": {
@@ -97,6 +181,20 @@
     "module": "LeanEval.EasyProblems",
     "submitter": "Kim Morrison"
   },
+  "commProb_closed": {
+    "theorem_names": [
+      "commProb_closed"
+    ],
+    "definition_names": [],
+    "permitted_axioms": [
+      "propext",
+      "Quot.sound",
+      "Classical.choice"
+    ],
+    "title": "Commuting probabilities are closed",
+    "module": "LeanEval.GroupTheory.CommProbClosed",
+    "submitter": "Thomas Browning"
+  },
   "contractibleSpace_houseWithTwoRooms": {
     "theorem_names": [
       "contractibleSpace_houseWithTwoRooms"
@@ -110,6 +208,34 @@
     "title": "Bing's house with two rooms is contractible",
     "module": "LeanEval.Topology.HouseWithTwoRooms",
     "submitter": "Junyan Xu"
+  },
+  "conway_knot_not_smoothly_slice": {
+    "theorem_names": [
+      "conway_knot_not_smoothly_slice"
+    ],
+    "definition_names": [],
+    "permitted_axioms": [
+      "propext",
+      "Quot.sound",
+      "Classical.choice"
+    ],
+    "title": "The Conway knot is not smoothly slice",
+    "module": "LeanEval.KnotTheory.Piccirillo",
+    "submitter": "Kim Morrison"
+  },
+  "conway_knot_topologically_slice": {
+    "theorem_names": [
+      "conway_knot_topologically_slice"
+    ],
+    "definition_names": [],
+    "permitted_axioms": [
+      "propext",
+      "Quot.sound",
+      "Classical.choice"
+    ],
+    "title": "The Conway knot is topologically slice",
+    "module": "LeanEval.KnotTheory.ConwayTopologicallySlice",
+    "submitter": "Kim Morrison"
   },
   "cubic_decay_asymptotic": {
     "theorem_names": [
@@ -151,6 +277,20 @@
     ],
     "title": "Real cyclotomic integer with house at most 2",
     "module": "LeanEval.NumberTheory.SmallHouse",
+    "submitter": "Kim Morrison"
+  },
+  "darboux": {
+    "theorem_names": [
+      "darboux"
+    ],
+    "definition_names": [],
+    "permitted_axioms": [
+      "propext",
+      "Quot.sound",
+      "Classical.choice"
+    ],
+    "title": "Darboux's theorem (symplectic forms are locally standard)",
+    "module": "LeanEval.Geometry.Darboux",
     "submitter": "Kim Morrison"
   },
   "deBranges_theorem": {
@@ -221,8 +361,22 @@
       "Quot.sound",
       "Classical.choice"
     ],
-    "title": "Existence of a 779247-dim irreducible e\u2088-representation with 40 tensor-square isotypic components",
+    "title": "Existence of a 779247-dim irreducible e₈-representation with 40 tensor-square isotypic components",
     "module": "LeanEval.RepresentationTheory.ExceptionalLieTensorSquare",
+    "submitter": "Kim Morrison"
+  },
+  "erdos_unit_distance_conjecture_false": {
+    "theorem_names": [
+      "erdos_unit_distance_conjecture_false"
+    ],
+    "definition_names": [],
+    "permitted_axioms": [
+      "propext",
+      "Quot.sound",
+      "Classical.choice"
+    ],
+    "title": "Erdős's unit-distance conjecture is false",
+    "module": "LeanEval.Combinatorics.UnitDistanceConjectureFalse",
     "submitter": "Kim Morrison"
   },
   "exists_chiral_knot": {
@@ -279,6 +433,48 @@
     ],
     "title": "Existence of a non-isotopic pair of oriented two-component links",
     "module": "LeanEval.KnotTheory.Linking",
+    "submitter": "Kim Morrison"
+  },
+  "exists_topologically_slice_not_smoothly_slice": {
+    "theorem_names": [
+      "exists_topologically_slice_not_smoothly_slice"
+    ],
+    "definition_names": [],
+    "permitted_axioms": [
+      "propext",
+      "Quot.sound",
+      "Classical.choice"
+    ],
+    "title": "Existence of a topologically slice, not smoothly slice knot",
+    "module": "LeanEval.KnotTheory.SliceDichotomy",
+    "submitter": "Kim Morrison"
+  },
+  "fatou_julia_dichotomy": {
+    "theorem_names": [
+      "julia_cantor_dichotomy"
+    ],
+    "definition_names": [],
+    "permitted_axioms": [
+      "propext",
+      "Quot.sound",
+      "Classical.choice"
+    ],
+    "title": "Fatou–Julia / Cantor dichotomy",
+    "module": "LeanEval.ComplexAnalysis.FatouJulia",
+    "submitter": "Kim Morrison"
+  },
+  "feit_thompson": {
+    "theorem_names": [
+      "feit_thompson"
+    ],
+    "definition_names": [],
+    "permitted_axioms": [
+      "propext",
+      "Quot.sound",
+      "Classical.choice"
+    ],
+    "title": "Feit–Thompson odd-order theorem",
+    "module": "LeanEval.GroupTheory.FeitThompson",
     "submitter": "Kim Morrison"
   },
   "fermat_last_theorem": {
@@ -351,6 +547,34 @@
     "module": "LeanEval.GroupTheory.Frobenius",
     "submitter": "Kim Morrison"
   },
+  "furstenberg_measure": {
+    "theorem_names": [
+      "furstenberg_measure_recurrence"
+    ],
+    "definition_names": [],
+    "permitted_axioms": [
+      "propext",
+      "Quot.sound",
+      "Classical.choice"
+    ],
+    "title": "Furstenberg measure-preserving multiple recurrence",
+    "module": "LeanEval.Dynamics.FurstenbergMeasure",
+    "submitter": "Kim Morrison"
+  },
+  "furstenberg_topological": {
+    "theorem_names": [
+      "furstenberg_topological_recurrence"
+    ],
+    "definition_names": [],
+    "permitted_axioms": [
+      "propext",
+      "Quot.sound",
+      "Classical.choice"
+    ],
+    "title": "Furstenberg–Weiss topological multiple recurrence (single-transformation form)",
+    "module": "LeanEval.Dynamics.FurstenbergTopological",
+    "submitter": "Kim Morrison"
+  },
   "g2_irrep_tensor_square_decomp": {
     "theorem_names": [
       "g2_irrep_tensor_square_decomp"
@@ -361,7 +585,7 @@
       "Quot.sound",
       "Classical.choice"
     ],
-    "title": "Existence of a 64-dim irreducible g\u2082-representation with 14 tensor-square isotypic components",
+    "title": "Existence of a 64-dim irreducible g₂-representation with 14 tensor-square isotypic components",
     "module": "LeanEval.RepresentationTheory.ExceptionalLieTensorSquare",
     "submitter": "Kim Morrison"
   },
@@ -421,6 +645,48 @@
     "module": "LeanEval.Analysis.Gleason",
     "submitter": "Kim Morrison"
   },
+  "gorenstein_walter": {
+    "theorem_names": [
+      "gorenstein_walter"
+    ],
+    "definition_names": [],
+    "permitted_axioms": [
+      "propext",
+      "Quot.sound",
+      "Classical.choice"
+    ],
+    "title": "Gorenstein–Walter theorem (dihedral Sylow 2-subgroup)",
+    "module": "LeanEval.GroupTheory.GorensteinWalter",
+    "submitter": "Kim Morrison"
+  },
+  "green_tao": {
+    "theorem_names": [
+      "green_tao"
+    ],
+    "definition_names": [],
+    "permitted_axioms": [
+      "propext",
+      "Quot.sound",
+      "Classical.choice"
+    ],
+    "title": "Green–Tao theorem",
+    "module": "LeanEval.NumberTheory.GreenTao",
+    "submitter": "Kim Morrison"
+  },
+  "hadwiger": {
+    "theorem_names": [
+      "hadwiger"
+    ],
+    "definition_names": [],
+    "permitted_axioms": [
+      "propext",
+      "Quot.sound",
+      "Classical.choice"
+    ],
+    "title": "Hadwiger's theorem",
+    "module": "LeanEval.ConvexGeometry.Hadwiger",
+    "submitter": "Kim Morrison"
+  },
   "heat_kernel_solves_heat_equation": {
     "theorem_names": [
       "heat_kernel_solves_heat_equation"
@@ -433,6 +699,20 @@
     ],
     "title": "Gaussian heat kernel solves the 1D heat equation",
     "module": "LeanEval.Analysis.ODE.HeatKernel",
+    "submitter": "Kim Morrison"
+  },
+  "hopf_rinow": {
+    "theorem_names": [
+      "hopf_rinow"
+    ],
+    "definition_names": [],
+    "permitted_axioms": [
+      "propext",
+      "Quot.sound",
+      "Classical.choice"
+    ],
+    "title": "Hopf–Rinow theorem",
+    "module": "LeanEval.Geometry.HopfRinow",
     "submitter": "Kim Morrison"
   },
   "instance_hole_example": {
@@ -462,6 +742,20 @@
     ],
     "title": "Perron-Frobenius for irreducible nonnegative matrices",
     "module": "LeanEval.LinearAlgebra.PerronFrobenius",
+    "submitter": "Kim Morrison"
+  },
+  "isoperimetric_inequality": {
+    "theorem_names": [
+      "isoperimetric"
+    ],
+    "definition_names": [],
+    "permitted_axioms": [
+      "propext",
+      "Quot.sound",
+      "Classical.choice"
+    ],
+    "title": "Isoperimetric inequality (n-dim, topological-frontier form)",
+    "module": "LeanEval.Geometry.IsoperimetricInequality",
     "submitter": "Kim Morrison"
   },
   "jacobian_challenge_alggeo": {
@@ -525,6 +819,118 @@
     "module": "LeanEval.Geometry.JacobianChallenge",
     "submitter": "Kevin Buzzard"
   },
+  "jordan_brouwer": {
+    "theorem_names": [
+      "jordan_brouwer"
+    ],
+    "definition_names": [],
+    "permitted_axioms": [
+      "propext",
+      "Quot.sound",
+      "Classical.choice"
+    ],
+    "title": "Jordan–Brouwer separation theorem",
+    "module": "LeanEval.Topology.JordanBrouwer",
+    "submitter": "Kim Morrison"
+  },
+  "jordan_curve": {
+    "theorem_names": [
+      "jordan_curve"
+    ],
+    "definition_names": [],
+    "permitted_axioms": [
+      "propext",
+      "Quot.sound",
+      "Classical.choice"
+    ],
+    "title": "Jordan curve theorem",
+    "module": "LeanEval.Topology.JordanCurve",
+    "submitter": "Kim Morrison"
+  },
+  "kakutani_fixed_point": {
+    "theorem_names": [
+      "kakutani_fixed_point"
+    ],
+    "definition_names": [],
+    "permitted_axioms": [
+      "propext",
+      "Quot.sound",
+      "Classical.choice"
+    ],
+    "title": "Kakutani fixed-point theorem",
+    "module": "LeanEval.Topology.Kakutani",
+    "submitter": "Kim Morrison"
+  },
+  "kolmogorov_arnold_superposition": {
+    "theorem_names": [
+      "kolmogorov_arnold"
+    ],
+    "definition_names": [],
+    "permitted_axioms": [
+      "propext",
+      "Quot.sound",
+      "Classical.choice"
+    ],
+    "title": "Kolmogorov–Arnold superposition theorem (non-universal Lorentz form)",
+    "module": "LeanEval.Analysis.KolmogorovArnold",
+    "submitter": "Kim Morrison"
+  },
+  "koszul_formula": {
+    "theorem_names": [
+      "koszul_formula"
+    ],
+    "definition_names": [],
+    "permitted_axioms": [
+      "propext",
+      "Quot.sound",
+      "Classical.choice"
+    ],
+    "title": "Koszul formula",
+    "module": "LeanEval.Geometry.KoszulFormula",
+    "submitter": "Kim Morrison"
+  },
+  "levi_civita_exists_unique": {
+    "theorem_names": [
+      "levi_civita_exists_unique"
+    ],
+    "definition_names": [],
+    "permitted_axioms": [
+      "propext",
+      "Quot.sound",
+      "Classical.choice"
+    ],
+    "title": "Fundamental theorem of Riemannian geometry (Levi-Civita)",
+    "module": "LeanEval.Geometry.LeviCivita",
+    "submitter": "Kim Morrison"
+  },
+  "lidskii_inequality": {
+    "theorem_names": [
+      "lidskii_inequality"
+    ],
+    "definition_names": [],
+    "permitted_axioms": [
+      "propext",
+      "Quot.sound",
+      "Classical.choice"
+    ],
+    "title": "Lidskii's inequality",
+    "module": "LeanEval.LinearAlgebra.LidskiiInequality",
+    "submitter": "Kim Morrison"
+  },
+  "lidskii_last": {
+    "theorem_names": [
+      "lidskii_last"
+    ],
+    "definition_names": [],
+    "permitted_axioms": [
+      "propext",
+      "Quot.sound",
+      "Classical.choice"
+    ],
+    "title": "Lidskii–Last eigenvalue-perturbation theorem",
+    "module": "LeanEval.LinearAlgebra.Lidskii",
+    "submitter": "Kim Morrison"
+  },
   "linear_ode_asymptotic_stability": {
     "theorem_names": [
       "linear_ode_asymptotic_stability"
@@ -537,6 +943,20 @@
     ],
     "title": "Linear ODE with negative-real-part eigenvalues is asymptotically stable",
     "module": "LeanEval.Analysis.ODE.LinearStability",
+    "submitter": "Kim Morrison"
+  },
+  "liouville_arnold": {
+    "theorem_names": [
+      "liouville_arnold"
+    ],
+    "definition_names": [],
+    "permitted_axioms": [
+      "propext",
+      "Quot.sound",
+      "Classical.choice"
+    ],
+    "title": "Liouville–Arnold theorem on integrable systems",
+    "module": "LeanEval.Geometry.LiouvilleArnold",
     "submitter": "Kim Morrison"
   },
   "list_append_singleton_length": {
@@ -567,6 +987,34 @@
     "module": "LeanEval.RepresentationTheory.M23TensorSquare",
     "submitter": "Kim Morrison"
   },
+  "mandelbar_not_path_connected": {
+    "theorem_names": [
+      "mandelbar_not_path_connected"
+    ],
+    "definition_names": [],
+    "permitted_axioms": [
+      "propext",
+      "Quot.sound",
+      "Classical.choice"
+    ],
+    "title": "Mandelbar (tricorn) is not path-connected (Hubbard–Schleicher)",
+    "module": "LeanEval.ComplexAnalysis.Mandelbar",
+    "submitter": "Kim Morrison"
+  },
+  "mandelbrot_connected": {
+    "theorem_names": [
+      "mandelbrot_connected"
+    ],
+    "definition_names": [],
+    "permitted_axioms": [
+      "propext",
+      "Quot.sound",
+      "Classical.choice"
+    ],
+    "title": "Mandelbrot set is connected (Douady–Hubbard)",
+    "module": "LeanEval.ComplexAnalysis.Mandelbrot",
+    "submitter": "Kim Morrison"
+  },
   "mem_convexHull_finset_extremePoints_of_mem_compact_convex": {
     "theorem_names": [
       "mem_convexHull_finset_extremePoints_of_mem_compact_convex"
@@ -579,6 +1027,62 @@
     ],
     "title": "Minkowski-Caratheodory theorem",
     "module": "LeanEval.ConvexGeometry.MinkowskiCaratheodory",
+    "submitter": "Kim Morrison"
+  },
+  "mergelyan_theorem": {
+    "theorem_names": [
+      "mergelyan"
+    ],
+    "definition_names": [],
+    "permitted_axioms": [
+      "propext",
+      "Quot.sound",
+      "Classical.choice"
+    ],
+    "title": "Mergelyan's theorem",
+    "module": "LeanEval.ComplexAnalysis.Mergelyan",
+    "submitter": "Kim Morrison"
+  },
+  "milnor_exotic_sphere_seven": {
+    "theorem_names": [
+      "milnor_exotic_sphere_seven"
+    ],
+    "definition_names": [],
+    "permitted_axioms": [
+      "propext",
+      "Quot.sound",
+      "Classical.choice"
+    ],
+    "title": "Milnor's exotic 7-sphere",
+    "module": "LeanEval.Topology.MilnorExoticSphereSeven",
+    "submitter": "Kim Morrison"
+  },
+  "morley_categoricity_theorem": {
+    "theorem_names": [
+      "morley_categoricity_theorem"
+    ],
+    "definition_names": [],
+    "permitted_axioms": [
+      "propext",
+      "Quot.sound",
+      "Classical.choice"
+    ],
+    "title": "Morley's categoricity theorem",
+    "module": "LeanEval.ModelTheory.MorleyCategoricity",
+    "submitter": "A. M. Berns"
+  },
+  "morse_inequality": {
+    "theorem_names": [
+      "morse_inequality"
+    ],
+    "definition_names": [],
+    "permitted_axioms": [
+      "propext",
+      "Quot.sound",
+      "Classical.choice"
+    ],
+    "title": "Morse inequalities",
+    "module": "LeanEval.Geometry.MorseInequalities",
     "submitter": "Kim Morrison"
   },
   "mulCayley_connected_iff_closure_eq_top": {
@@ -595,6 +1099,36 @@
     "module": "LeanEval.Combinatorics.CayleyConnected",
     "submitter": "Kim Morrison"
   },
+  "multi_hole_helpers_example": {
+    "theorem_names": [
+      "Helpers.first",
+      "Helpers.second_eq",
+      "Helpers.third_eq"
+    ],
+    "definition_names": [],
+    "permitted_axioms": [
+      "propext",
+      "Quot.sound",
+      "Classical.choice"
+    ],
+    "title": "multi-hole-with-helpers regression example",
+    "module": "LeanEval.Sandbox.MultiHoleHelpersExample",
+    "submitter": "Kim Morrison"
+  },
+  "nash_equilibrium_exists": {
+    "theorem_names": [
+      "nash_equilibrium_exists"
+    ],
+    "definition_names": [],
+    "permitted_axioms": [
+      "propext",
+      "Quot.sound",
+      "Classical.choice"
+    ],
+    "title": "Nash equilibrium existence theorem",
+    "module": "LeanEval.GameTheory.Nash",
+    "submitter": "Kim Morrison"
+  },
   "neukirch_uchida": {
     "theorem_names": [
       "neukirch_uchida"
@@ -605,7 +1139,7 @@
       "Quot.sound",
       "Classical.choice"
     ],
-    "title": "Neukirch\u2013Uchida theorem",
+    "title": "Neukirch–Uchida theorem",
     "module": "LeanEval.NumberTheory.NeukirchUchida",
     "submitter": "Junyan Xu"
   },
@@ -621,6 +1155,34 @@
     ],
     "title": "Oppenheim's inequality for Hadamard products",
     "module": "LeanEval.LinearAlgebra.Oppenheim",
+    "submitter": "Kim Morrison"
+  },
+  "ornstein_weiss_rokhlin": {
+    "theorem_names": [
+      "ornstein_weiss_rokhlin"
+    ],
+    "definition_names": [],
+    "permitted_axioms": [
+      "propext",
+      "Quot.sound",
+      "Classical.choice"
+    ],
+    "title": "Ornstein–Weiss ℤᵈ Rokhlin lemma",
+    "module": "LeanEval.Dynamics.OrnsteinWeiss",
+    "submitter": "Kim Morrison"
+  },
+  "parallel_postulate_independent": {
+    "theorem_names": [
+      "parallel_postulate_independent"
+    ],
+    "definition_names": [],
+    "permitted_axioms": [
+      "propext",
+      "Quot.sound",
+      "Classical.choice"
+    ],
+    "title": "Independence of the parallel postulate",
+    "module": "LeanEval.Geometry.ParallelPostulate",
     "submitter": "Kim Morrison"
   },
   "permute_to_unimodal": {
@@ -693,6 +1255,104 @@
     "module": "LeanEval.Topology.HomotopyGroups",
     "submitter": "Kim Morrison"
   },
+  "platonic_classification": {
+    "theorem_names": [
+      "platonic_classification"
+    ],
+    "definition_names": [],
+    "permitted_axioms": [
+      "propext",
+      "Quot.sound",
+      "Classical.choice"
+    ],
+    "title": "Platonic classification",
+    "module": "LeanEval.Geometry.PlatonicClassification",
+    "submitter": "Kim Morrison"
+  },
+  "poincare_3d_smooth": {
+    "theorem_names": [
+      "poincare_3d_smooth"
+    ],
+    "definition_names": [],
+    "permitted_axioms": [
+      "propext",
+      "Quot.sound",
+      "Classical.choice"
+    ],
+    "title": "3D smooth Poincaré conjecture (Perelman)",
+    "module": "LeanEval.Topology.Poincare3DSmooth",
+    "submitter": "Kim Morrison"
+  },
+  "poincare_3d_topological": {
+    "theorem_names": [
+      "poincare_3d_topological"
+    ],
+    "definition_names": [],
+    "permitted_axioms": [
+      "propext",
+      "Quot.sound",
+      "Classical.choice"
+    ],
+    "title": "3D topological Poincaré conjecture (Perelman)",
+    "module": "LeanEval.Topology.Poincare3DTopological",
+    "submitter": "Kim Morrison"
+  },
+  "poincare_4d_topological": {
+    "theorem_names": [
+      "poincare_4d_topological"
+    ],
+    "definition_names": [],
+    "permitted_axioms": [
+      "propext",
+      "Quot.sound",
+      "Classical.choice"
+    ],
+    "title": "4D topological Poincaré conjecture (Freedman)",
+    "module": "LeanEval.Topology.Poincare4DTopological",
+    "submitter": "Kim Morrison"
+  },
+  "poincare_bendixson": {
+    "theorem_names": [
+      "poincare_bendixson"
+    ],
+    "definition_names": [],
+    "permitted_axioms": [
+      "propext",
+      "Quot.sound",
+      "Classical.choice"
+    ],
+    "title": "Poincaré–Bendixson theorem",
+    "module": "LeanEval.Dynamics.PoincareBendixson",
+    "submitter": "Kim Morrison"
+  },
+  "poincare_high_dim_topological": {
+    "theorem_names": [
+      "poincare_high_dim_topological"
+    ],
+    "definition_names": [],
+    "permitted_axioms": [
+      "propext",
+      "Quot.sound",
+      "Classical.choice"
+    ],
+    "title": "Generalized topological Poincaré conjecture in dimensions ≥ 5 (Smale)",
+    "module": "LeanEval.Topology.PoincareHighDimTopological",
+    "submitter": "Kim Morrison"
+  },
+  "poincare_siegel_linearisation": {
+    "theorem_names": [
+      "poincare_siegel"
+    ],
+    "definition_names": [],
+    "permitted_axioms": [
+      "propext",
+      "Quot.sound",
+      "Classical.choice"
+    ],
+    "title": "Poincaré–Siegel linearisation theorem",
+    "module": "LeanEval.ComplexAnalysis.PoincareSiegel",
+    "submitter": "Kim Morrison"
+  },
   "posSemidef_map_exp": {
     "theorem_names": [
       "posSemidef_map_exp"
@@ -717,7 +1377,7 @@
       "Quot.sound",
       "Classical.choice"
     ],
-    "title": "Rad\u00f3's theorem on Riemann surfaces",
+    "title": "Radó's theorem on Riemann surfaces",
     "module": "LeanEval.Geometry.RadoTheorem",
     "submitter": "Junyan Xu"
   },
@@ -735,6 +1395,20 @@
     "module": "LeanEval.NumberTheory.Lagarias",
     "submitter": "Kim Morrison"
   },
+  "rokhlin_lemma": {
+    "theorem_names": [
+      "rokhlin_lemma"
+    ],
+    "definition_names": [],
+    "permitted_axioms": [
+      "propext",
+      "Quot.sound",
+      "Classical.choice"
+    ],
+    "title": "Rokhlin lemma",
+    "module": "LeanEval.Dynamics.RokhlinLemma",
+    "submitter": "Kim Morrison"
+  },
   "rouche_zero_count_eq": {
     "theorem_names": [
       "rouche_zero_count_eq"
@@ -747,6 +1421,62 @@
     ],
     "title": "Rouche theorem via zero counting",
     "module": "LeanEval.ComplexAnalysis.Rouche",
+    "submitter": "Kim Morrison"
+  },
+  "runge_theorem": {
+    "theorem_names": [
+      "runge"
+    ],
+    "definition_names": [],
+    "permitted_axioms": [
+      "propext",
+      "Quot.sound",
+      "Classical.choice"
+    ],
+    "title": "Runge's theorem",
+    "module": "LeanEval.ComplexAnalysis.Runge",
+    "submitter": "Kim Morrison"
+  },
+  "schauder_fixed_point": {
+    "theorem_names": [
+      "schauder_fixed_point"
+    ],
+    "definition_names": [],
+    "permitted_axioms": [
+      "propext",
+      "Quot.sound",
+      "Classical.choice"
+    ],
+    "title": "Schauder fixed-point theorem",
+    "module": "LeanEval.Topology.Schauder",
+    "submitter": "Kim Morrison"
+  },
+  "schlafli_classification": {
+    "theorem_names": [
+      "schlafli_classification"
+    ],
+    "definition_names": [],
+    "permitted_axioms": [
+      "propext",
+      "Quot.sound",
+      "Classical.choice"
+    ],
+    "title": "Schläfli classification of regular polytopes",
+    "module": "LeanEval.Geometry.SchlafliClassification",
+    "submitter": "Kim Morrison"
+  },
+  "schoenflies": {
+    "theorem_names": [
+      "schoenflies"
+    ],
+    "definition_names": [],
+    "permitted_axioms": [
+      "propext",
+      "Quot.sound",
+      "Classical.choice"
+    ],
+    "title": "Schoenflies theorem",
+    "module": "LeanEval.Topology.Schoenflies",
     "submitter": "Kim Morrison"
   },
   "schreier_conjecture": {
@@ -775,6 +1505,34 @@
     ],
     "title": "Smale conjecture (Hatcher) in relative parameterized form",
     "module": "LeanEval.Topology.SmaleConjecture",
+    "submitter": "Kim Morrison"
+  },
+  "solvable_by_radicals_converse": {
+    "theorem_names": [
+      "solvable_iff_solvableByRad"
+    ],
+    "definition_names": [],
+    "permitted_axioms": [
+      "propext",
+      "Quot.sound",
+      "Classical.choice"
+    ],
+    "title": "Solvable extensions ↔ solvable groups (the missing converse in Abel–Ruffini)",
+    "module": "LeanEval.Algebra.SolvableByRadicals",
+    "submitter": "Kim Morrison"
+  },
+  "sturm": {
+    "theorem_names": [
+      "sturm"
+    ],
+    "definition_names": [],
+    "permitted_axioms": [
+      "propext",
+      "Quot.sound",
+      "Classical.choice"
+    ],
+    "title": "Sturm's theorem",
+    "module": "LeanEval.Algebra.Sturm",
     "submitter": "Kim Morrison"
   },
   "sturm_separation": {
@@ -819,6 +1577,34 @@
     "module": "LeanEval.RepresentationTheory.SchurWeyl",
     "submitter": "Kim Morrison"
   },
+  "symplectic_matrix_det": {
+    "theorem_names": [
+      "symplectic_matrix_det"
+    ],
+    "definition_names": [],
+    "permitted_axioms": [
+      "propext",
+      "Quot.sound",
+      "Classical.choice"
+    ],
+    "title": "Symplectic matrices have determinant 1",
+    "module": "LeanEval.LinearAlgebra.SymplecticDet",
+    "submitter": "Kim Morrison"
+  },
+  "szemeredi": {
+    "theorem_names": [
+      "szemeredi"
+    ],
+    "definition_names": [],
+    "permitted_axioms": [
+      "propext",
+      "Quot.sound",
+      "Classical.choice"
+    ],
+    "title": "Szemerédi's theorem",
+    "module": "LeanEval.Combinatorics.Szemeredi",
+    "submitter": "Kim Morrison"
+  },
   "topological_classification_of_surfaces": {
     "theorem_names": [
       "classification_of_surfaces"
@@ -861,6 +1647,34 @@
     "module": "LeanEval.Geometry.Uniformization",
     "submitter": "Junyan Xu"
   },
+  "unit_distance_upper_bound": {
+    "theorem_names": [
+      "unit_distance_upper_bound"
+    ],
+    "definition_names": [],
+    "permitted_axioms": [
+      "propext",
+      "Quot.sound",
+      "Classical.choice"
+    ],
+    "title": "Spencer-Szemerédi-Trotter unit-distance upper bound",
+    "module": "LeanEval.Combinatorics.UnitDistanceUpperBound",
+    "submitter": "Kim Morrison"
+  },
+  "variable_binder_example": {
+    "theorem_names": [
+      "variable_binder_example"
+    ],
+    "definition_names": [],
+    "permitted_axioms": [
+      "propext",
+      "Quot.sound",
+      "Classical.choice"
+    ],
+    "title": "variable-binder minimal example",
+    "module": "LeanEval.Sandbox.VariableBinderExample",
+    "submitter": "Kim Morrison"
+  },
   "vonNeumann_doubleCommutant_tfae": {
     "theorem_names": [
       "vonNeumann_doubleCommutant_tfae"
@@ -873,6 +1687,20 @@
     ],
     "title": "von Neumann double commutant theorem",
     "module": "LeanEval.Analysis.VonNeumannDoubleCommutant",
+    "submitter": "Kim Morrison"
+  },
+  "weak_morse_inequality": {
+    "theorem_names": [
+      "weak_morse_inequality"
+    ],
+    "definition_names": [],
+    "permitted_axioms": [
+      "propext",
+      "Quot.sound",
+      "Classical.choice"
+    ],
+    "title": "Weak Morse inequalities",
+    "module": "LeanEval.Geometry.WeakMorseInequality",
     "submitter": "Kim Morrison"
   }
 }
