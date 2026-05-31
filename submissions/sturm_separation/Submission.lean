@@ -2,8 +2,12 @@ import Mathlib
 import Submission.Helpers
 
 namespace Submission
-
-open Submission.Helpers
+  open Submission.Helpers
+  open Set
+  open Real
+  open MeasureTheory
+  open Filter
+  open scoped Topology
 
   theorem sturm_separation (p q y₁ y₂ : ℝ → ℝ) (a b : ℝ) (hab : a < b)
       (J : Set ℝ) (hJ_open : IsOpen J) (hJ_conn : IsPreconnected J)

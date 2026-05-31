@@ -207,6 +207,20 @@ def indent_block(text, spaces=2):
 
 RE_NAMESPACE_CMD = re.compile(r"^\s*(namespace|end)\s+\S+.*$")
 
+
+def _is_env_directive(text):
+    """Return True if *text* is a top-level environment directive that
+    must be visible in every file that renders part of the source
+    (e.g. ``open scoped Topology``).
+
+    ``section`` / ``noncomputable section`` are intentionally excluded:
+    they require a closing ``end`` and are handled by
+    ``_unnamed_section_close_count`` inside ``render_helpers``; the
+    submission file doesn't need them (it contains only theorems, no
+    ``def`` or ``variable`` declarations)."""
+    stripped = text.strip()
+    return stripped.startswith("open ") or stripped.startswith("set_option ")
+
 def _strip_namespace_wrappers(items):
     """Remove `namespace Foo` / `end Foo` lines that wrapped the source file.
 
@@ -252,7 +266,7 @@ def render_helpers(imports, helper_items):
     return "\n".join(rendered)
 
 
-def render_submission(imports, target_items, has_challenge_deps=True):
+def render_submission(imports, target_items, env_directives=None, has_challenge_deps=True):
     clean = _strip_namespace_wrappers(target_items)
     body = "\n\n".join(item for item in clean if item)
     # Strip namespace/end lines captured inside declaration text
@@ -260,13 +274,16 @@ def render_submission(imports, target_items, has_challenge_deps=True):
         line for line in body.splitlines()
         if not RE_NAMESPACE_CMD.match(line)
     )
+    if env_directives is None:
+        env_directives = []
     rendered = []
     rendered.append("import ChallengeDeps" if has_challenge_deps else "import Mathlib")
     rendered.append("import Submission.Helpers")
     rendered.append("")
     rendered.append("namespace Submission")
-    rendered.append("")
-    rendered.append("open Submission.Helpers")
+    rendered.append("  open Submission.Helpers")
+    for d in env_directives:
+        rendered.append("  " + d)
     rendered.append("")
     rendered.append(indent_block(body))
     rendered.append("")
@@ -289,8 +306,12 @@ def write_submission(problem_id, imports, helper_items, target_items, lakefile_t
 
     helpers_file = helpers_dir / "Helpers.lean"
     submission_file = sub_dir / "Submission.lean"
+    env_directives = [item for item in helper_items if _is_env_directive(item)]
     helpers_file.write_text(render_helpers(imports, helper_items), encoding="utf-8")
-    submission_file.write_text(render_submission(imports, target_items, has_challenge_deps), encoding="utf-8")
+    submission_file.write_text(
+        render_submission(imports, target_items, env_directives, has_challenge_deps),
+        encoding="utf-8",
+    )
     return submission_file, helpers_file
 
 
