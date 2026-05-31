@@ -133,7 +133,7 @@ def split_items(text):
 
     for line in lines:
         is_prefix = ATTRIBUTE_RE.match(line) or COMMENT_RE.match(line) or line.strip() == ""
-        is_decl = DECL_START_RE.match(line)
+        is_decl = DECL_START_RE.match(line) and not line.startswith((" ", "\t"))
 
         if is_decl:
             flush_buffer()
