@@ -12,3 +12,13 @@ jobs:
     steps:
       - uses: actions/checkout@v4
       - uses: leanprover/lean-action@v1
+      - name: Build all submissions
+        shell: bash
+        run: |
+          for dir in submissions/*/; do
+            echo "::group::Building $dir"
+            cd "$dir"
+            lake build
+            cd "$OLDPWD"
+            echo "::endgroup::"
+          done

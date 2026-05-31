@@ -2,8 +2,9 @@ import Mathlib
 import Submission.Helpers
 
 namespace Submission
-
-open Submission.Helpers
+  open Submission.Helpers
+  open SimpleGraph
+  open Finset
 
   theorem finite_graph_ramsey_theorem :
       ∀ r s : ℕ, 2 ≤ r → 2 ≤ s →

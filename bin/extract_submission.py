@@ -29,6 +29,8 @@ REPO_ROOT = Path(__file__).resolve().parent.parent
 SOURCE_DIR = REPO_ROOT / "DeepthoughtLeanEval"
 SUBMISSIONS_DIR = REPO_ROOT / "submissions"
 PROBLEMS_FILE = REPO_ROOT / "problems.json"
+ROOT_LAKEFILE = REPO_ROOT / "lakefile.toml"
+LEAN_TOOLCHAIN = REPO_ROOT / "lean-toolchain"
 BENCHMARK_RAW = "https://raw.githubusercontent.com/leanprover/lean-eval/main/generated"
 
 DECL_KEYWORDS = (
@@ -292,6 +294,48 @@ def render_submission(imports, target_items, env_directives=None, has_challenge_
     return "\n".join(rendered)
 
 
+def read_mathlib_rev():
+    """Extract the Mathlib git revision from the root lakefile.toml."""
+    if not ROOT_LAKEFILE.is_file():
+        return None
+    text = ROOT_LAKEFILE.read_text(encoding="utf-8")
+    # Match the [[require]] block for mathlib
+    in_mathlib = False
+    for line in text.splitlines():
+        if line.strip() == '[[require]]':
+            in_mathlib = True
+            continue
+        if in_mathlib and line.strip().startswith('name = "mathlib"'):
+            continue
+        if in_mathlib and line.strip().startswith("git = "):
+            continue
+        if in_mathlib and line.strip().startswith("rev = "):
+            return line.split('"')[1]
+        if in_mathlib and line.strip().startswith("[["):
+            in_mathlib = False
+    return None
+
+
+def make_lakefile_text(problem_id):
+    """Generate a complete lakefile.toml for a submission."""
+    rev = read_mathlib_rev()
+    if rev is None:
+        raise SystemExit("Could not find Mathlib revision in root lakefile.toml")
+    return (
+        f'name = "{problem_id}"\n'
+        f'defaultTargets = ["{problem_id}"]\n'
+        f"\n"
+        f'[[require]]\n'
+        f'name = "mathlib"\n'
+        f'git = "https://github.com/leanprover-community/mathlib4.git"\n'
+        f'rev = "{rev}"\n'
+        f"\n"
+        f'[[lean_lib]]\n'
+        f'name = "{problem_id}"\n'
+        f'roots = ["."]\n'
+    )
+
+
 def write_submission(problem_id, imports, helper_items, target_items, lakefile_text=None, has_challenge_deps=True):
     sub_dir = SUBMISSIONS_DIR / problem_id
     helpers_dir = sub_dir / "Submission"
@@ -303,6 +347,9 @@ def write_submission(problem_id, imports, helper_items, target_items, lakefile_t
         lakefile.write_text(lakefile_text, encoding="utf-8")
     elif not lakefile.exists():
         lakefile.write_text(f'name = "{problem_id}"\n', encoding="utf-8")
+
+    toolchain = sub_dir / "lean-toolchain"
+    toolchain.write_text(LEAN_TOOLCHAIN.read_text(encoding="utf-8"), encoding="utf-8")
 
     helpers_file = helpers_dir / "Helpers.lean"
     submission_file = sub_dir / "Submission.lean"
@@ -344,7 +391,7 @@ def main():
     source_text = source_file.read_text(encoding="utf-8")
     imports, helper_items, target_items = collect_parts(source_text, target_names, framework_names)
 
-    lakefile_text = f'name = "{args.problem_id}"\n'
+    lakefile_text = make_lakefile_text(args.problem_id)
     submission_file, helpers_file = write_submission(
         args.problem_id, imports, helper_items, target_items,
         lakefile_text=lakefile_text, has_challenge_deps=has_challenge_deps,

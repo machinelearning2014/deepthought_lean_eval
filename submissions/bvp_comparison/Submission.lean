@@ -2,8 +2,8 @@ import Mathlib
 import Submission.Helpers
 
 namespace Submission
-
-open Submission.Helpers
+  open Submission.Helpers
+  open Set
 
   theorem bvp_comparison (J : Set ℝ) (hJ_open : IsOpen J) (hJ_sub : Set.Icc (0 : ℝ) 1 ⊆ J)
       (u v : ℝ → ℝ)
