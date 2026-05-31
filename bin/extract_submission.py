@@ -359,6 +359,15 @@ def write_submission(problem_id, imports, helper_items, target_items, lakefile_t
         render_submission(imports, target_items, env_directives, has_challenge_deps),
         encoding="utf-8",
     )
+
+    # Remove Challenge.lean (the unsolved problem statement with `sorry`).
+    # It was scaffolded as a reference, but the solved proof is now in
+    # Submission.lean.  Leaving it in the directory would cause `lake build`
+    # to fail because `roots = ["."]` compiles all .lean files.
+    challenge_file = sub_dir / "Challenge.lean"
+    if challenge_file.exists():
+        challenge_file.unlink()
+
     return submission_file, helpers_file
 
 
