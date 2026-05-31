@@ -332,7 +332,6 @@ def make_lakefile_text(problem_id):
         f"\n"
         f'[[lean_lib]]\n'
         f'name = "{problem_id}"\n'
-        f'roots = ["."]\n'
     )
 
 
