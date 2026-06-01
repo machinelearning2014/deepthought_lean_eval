@@ -8,3 +8,5 @@ rev = "5450b53e5ddc75d46418fabb605edbf36bd0beb6"
 
 [[lean_lib]]
 name = "two_plus_two"
+srcDir = "."
+globs = ["Submission"]
