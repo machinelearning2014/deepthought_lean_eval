@@ -332,8 +332,6 @@ def make_lakefile_text(problem_id):
         f"\n"
         f'[[lean_lib]]\n'
         f'name = "{problem_id}"\n'
-        f'srcDir = "."\n'
-        f'globs = ["Submission"]\n'
     )
 
 
@@ -368,6 +366,11 @@ def write_submission(problem_id, imports, helper_items, target_items, lakefile_t
     challenge_file = sub_dir / "Challenge.lean"
     if challenge_file.exists():
         challenge_file.unlink()
+
+    # Lake 5 defaults roots to #[name], so it expects <name>.lean as the
+    # root module.  Create it as a minimal entry point that imports Submission.
+    entry_point = sub_dir / f"{problem_id}.lean"
+    entry_point.write_text("import Submission\n", encoding="utf-8")
 
     return submission_file, helpers_file
 
